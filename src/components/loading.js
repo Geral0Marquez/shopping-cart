@@ -1,8 +1,5 @@
 import React, {useState, useEffect} from 'react';
 
-
-
-
 const Loading = () => {
 
     const [isloading, setLoading] = useState(undefined);
@@ -15,7 +12,7 @@ const Loading = () => {
             console.log(json);
             setLoading(true);
         });
-        
+
         }, 1500);
     },[])
 

@@ -1,5 +1,5 @@
 
-const Paginacion = ({postPerPage,residentData ,paginate, selected}) => {
+const Page = ({postPerPage,residentData ,paginate, selected}) => {
     const pageNumbers=[];
 
     for(let i=1;i<=Math.ceil(residentData/postPerPage);i++){
@@ -24,4 +24,4 @@ const Paginacion = ({postPerPage,residentData ,paginate, selected}) => {
     );
 };
 
-export default Paginacion;
+export default Page;
