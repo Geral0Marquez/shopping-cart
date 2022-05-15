@@ -1,7 +1,7 @@
 import Location from "./components/Location"
 import Loading from "./components/Loading";
 import './App.css';
-import Page from "./components/Page"
+
 
 document.body.style = "background: #0D1E40"
 function App() {
@@ -18,7 +18,6 @@ function App() {
             <h1>Rick and Morty Wiki</h1>
             <Location />
             <Loading/>
-            <Page/>
           </div>
     </>
   );
