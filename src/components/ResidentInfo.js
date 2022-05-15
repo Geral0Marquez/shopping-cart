@@ -17,7 +17,7 @@ const ResidentInfo = ({ url }) => {
       }
     ;
   }    
-  }, [url]);
+  }, [url, resident.status]);
 
   return (
     <div className="container-resident">
