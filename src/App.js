@@ -1,5 +1,5 @@
 import Location from "./components/Location"
-import Loading from "./components/Loading";
+
 import './App.css';
 
 
@@ -17,7 +17,7 @@ function App() {
         <div className="container">
             <h1>Rick and Morty Wiki</h1>
             <Location />
-            <Loading/>
+           
           </div>
     </>
   );
