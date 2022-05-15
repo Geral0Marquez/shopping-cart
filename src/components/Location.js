@@ -73,7 +73,7 @@ const Location = () => {
           <div className="row">
                 {currentPost?.map((resident) => (
 
-                <ResidentInfo url={resident} key={resident} />
+                <ResidentInfo url={resident} key={resident}  array={search.residents}/>
               
                 ))}
           </div>
