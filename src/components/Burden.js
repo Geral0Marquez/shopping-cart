@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 
 const Burden = () => {
-
     const [isloading, setLoading] = useState(undefined);
-
-    useEffect(()=>{
+    
+    useEffect(()=>
+    {
         setTimeout(() => {
             fetch('https://jsonplaceholder.typicode.com/posts/1')
             .then((res) => res.json())
@@ -15,8 +15,6 @@ const Burden = () => {
 
         }, 1500);
     },[])
-
-  
 
     return (
         <div>
