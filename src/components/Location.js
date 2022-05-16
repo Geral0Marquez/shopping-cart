@@ -1,12 +1,15 @@
 import axios from "axios";
 import React, {useEffect, useState } from "react";
 import ResidentInfo from "./ResidentInfo";
+import Page from './Page';
 import swal from "sweetalert";
 
 
 
 const Location = () => {
   const [search, setSearch] = useState({});
+  const [currentPage,setCurrentPage]=useState(1)
+  const [postPerPage]=useState(10)
   const [id, setId] = useState("");
 
   useEffect(() =>
@@ -32,7 +35,14 @@ const Location = () => {
     }
    
   };
+  // tener desde el primer dato y último para darle un rango a la página
+  const indexOfLastPost = currentPage * postPerPage
+  const indexOfFirstPost = indexOfLastPost - postPerPage
+  const currentNew=search.residents?.slice(indexOfFirstPost,indexOfLastPost)
 
+  //cambiar la pagina
+  const paginate = (pageNumber)=>
+  {setCurrentPage(pageNumber)}
 
 
   return (
@@ -68,12 +78,13 @@ const Location = () => {
         </h2>
 
         <div className="row">
-          {search.residents?.map((resident) =>
+          {currentNew?.map((resident) =>
           (<ResidentInfo url={resident} key={resident} />))}
         </div>
           
-      
- 
+        <div className="card-page">
+          <Page postPerPage={postPerPage} residentData={search.residents?.length} paginate={paginate} selected={currentPage}/>
+        </div>
 
       </ul>
 
