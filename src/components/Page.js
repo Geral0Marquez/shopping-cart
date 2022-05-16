@@ -1,4 +1,4 @@
-
+/*
 const Page = ({postPerPage,residentData ,paginate, selected}) =>
 {
     const pageNumbers=[];
@@ -18,4 +18,4 @@ const Page = ({postPerPage,residentData ,paginate, selected}) =>
     );
 };
 
-export default Page;
+export default Page;*/
