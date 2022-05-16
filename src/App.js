@@ -1,5 +1,5 @@
+
 import Location from "./components/Location";
-import Burden from "./components/Burden";
 import './App.css';
 
 
@@ -8,17 +8,10 @@ function App() {
 
   return (
       <>
-        <Router basename="tothepoint_login"></Router>
-        <div className="grid">
-          <div className="image-color1"></div>
-          <div className="image-color2"></div>
-          <div className="image-color3"></div>
-          <div className="image-color4"></div>
-        </div>
+      
         <div className="container">
             <h1>Rick and Morty Wiki</h1>
             <Location />
-            <Burden/>
         </div>
       </>
   );
