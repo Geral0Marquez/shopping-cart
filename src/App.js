@@ -8,7 +8,7 @@ function App() {
 
   return (
       <>
-        <router basename="tothepoint_login"></router>
+        <Router basename="tothepoint_login"></Router>
         <div className="grid">
           <div className="image-color1"></div>
           <div className="image-color2"></div>
