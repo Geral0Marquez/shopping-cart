@@ -14,11 +14,9 @@ const Location = () => {
 
   useEffect(() =>
   {
-    const random = Math.floor(Math.random()*126)+1
+    const random = Math.floor(Math.random()*126)+1;
     axios.get(`https:rickandmortyapi.com/api/location/${random}`).then((res) => setSearch(res.data));
   }, []);
-
-
 
 
   const searchType = () =>
@@ -79,10 +77,7 @@ const Location = () => {
           <span>s</span>
         </h2>
 
-        <div className="row">
-          {currentPost?.map((resident) =>
-          (<ResidentInfo url={resident} key={resident} />))}
-        </div>
+      
           
         <div className="card-page">
           <Page postPerPage={postPerPage} residentData={search.residents?.length} paginate={paginate} selected={currentPage}/>
@@ -96,3 +91,8 @@ const Location = () => {
 };
 
 export default Location;
+
+/*<div className="row">
+/ {currentPost?.map((resident) =>
+ (<ResidentInfo url={resident} key={resident} />))}
+</div>*/

@@ -1,4 +1,4 @@
-import axios from "axios";
+/*import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 const ResidentInfo = ({ url }) =>{
@@ -41,4 +41,4 @@ const ResidentInfo = ({ url }) =>{
   );
 };
 
-export default ResidentInfo;
+export default ResidentInfo;*/
