@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, {useEffect, useState } from "react";
 //import ResidentInfo from "./ResidentInfo";
-import Page from './Page';
+//import Page from './Page';
 import swal from "sweetalert";
 
 
