@@ -15,14 +15,14 @@ const Location = () => {
   useEffect(() =>
   {
     const random = Math.floor(Math.random()*126)+1;
-    axios.get(`https:rickandmortyapi.com/api/location/${random}`).then((res) => setSearch(res.data));
+    axios.get(`https://rickandmortyapi.com/api/location/${random}`).then((res) => setSearch(res.data));
   }, []);
 
 
   const searchType = () =>
   {
     console.log(id);
-    if(id<=126){axios.get(`https:rickandmortyapi.com/api/location/${id}`).then((res) => setSearch(res.data));}
+    if(id<=126){axios.get(`https://rickandmortyapi.com/api/location/${id}`).then((res) => setSearch(res.data));}
     else
     {
       swal
