@@ -1,4 +1,8 @@
 
+<<<<<<< HEAD
+=======
+@import url(https://fonts.googleapis.com/css2?family=Pangolin&display=swap);
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 * {
   font-family: sans-serif;
   padding: 0;
@@ -12,15 +16,21 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+<<<<<<< HEAD
 
 }
 
 
+=======
+}
+
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 html, body 
 { 
  overflow-x: hidden
 }
 
+<<<<<<< HEAD
 .container-box{
 padding-top: 20px;
 padding-bottom: 20px;
@@ -134,6 +144,44 @@ padding-bottom: 30px;
 }
 
 
+=======
+
+
+.overlay{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #706f6f;
+  opacity: .4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.father-box{
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal{
+  box-shadow: black;
+  padding: 50px;
+  width: 500px;
+  position: relative;
+  z-index: 9;
+  background-color: red;
+  
+}
+
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 .list-group{
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -178,8 +226,11 @@ li p{
   text-align: left;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 li b{
   color:#dfdada;
   font-weight: 400;
@@ -187,7 +238,10 @@ li b{
 
 li h2{
   font-size: 20px;
+<<<<<<< HEAD
   font-weight: 600;
+=======
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
   border-bottom: 1px solid #ebebeb;
   padding-top: 5%;
   padding-bottom: 3%;
@@ -201,6 +255,7 @@ li h2{
 
 
 .btn, .btn-remove{
+<<<<<<< HEAD
   border-radius: 0;
   box-shadow: 0 0 4px snow, 0 0 4px snow, 0 0 4px snow;
   cursor: pointer;
@@ -213,6 +268,20 @@ li h2{
   padding: 10px;
   text-align: center;
   width: 45px;
+=======
+    border-radius: 0;
+    box-shadow: 0 0 4px snow, 0 0 4px snow, 0 0 4px snow;
+    cursor: pointer;
+    float: left;
+    font-size: 1.2rem;
+    font-size: 20px;
+    font-weight: 600;
+    height: 45px;
+    margin: 1px 3px;
+    padding: 10px;
+    text-align: center;
+    width: 45px;
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 }
 .btn{
   border: 2px solid rgba(167, 164, 164, 0.833);
@@ -257,6 +326,7 @@ li h2{
 background-color: #4804DB;
 }
 
+<<<<<<< HEAD
 @media (min-width: 100px) and (max-width: 827px) 
 {
   .wraper{
@@ -270,6 +340,10 @@ background-color: #4804DB;
 
 
 
+=======
+@media (min-width: 100px) and (max-width: 400px) 
+{
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
   .list-group{
     display: grid;
     grid-template-columns: 100%;
@@ -302,6 +376,7 @@ background-color: #4804DB;
     padding: 6px;
     text-align: center;
     width: 35px;
+<<<<<<< HEAD
   }
 }
 
@@ -331,6 +406,12 @@ background-color: #4804DB;
 }
 
 
+=======
+}
+
+
+}
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 
 
 @media (min-width: 379px) and (max-width: 499px) 
@@ -367,7 +448,13 @@ background-color: #4804DB;
     padding: 6px;
     text-align: center;
     width: 35px;
+<<<<<<< HEAD
   }
+=======
+}
+
+
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 }
 
 @media (min-width: 500px) and (max-width: 700px) {
@@ -397,7 +484,13 @@ background-color: #4804DB;
     padding: 6px;
     text-align: center;
     width: 33px;
+<<<<<<< HEAD
   }
+=======
+}
+
+
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 }
 
 @media (min-width: 622px){
@@ -422,7 +515,10 @@ background-color: #4804DB;
     height: 270px;
   }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
   .btn, .btn-remove{
     font-size: 1.2rem;
     font-size: 20px;
@@ -432,7 +528,11 @@ background-color: #4804DB;
     padding: 6px;
     text-align: center;
     width: 33px;
+<<<<<<< HEAD
   } 
+=======
+} 
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 
 }
 
@@ -454,7 +554,14 @@ background-color: #4804DB;
     height: 45px;
     margin: 2px 4px;
     padding: 10px;
+<<<<<<< HEAD
   } 
+=======
+} 
+
+
+
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 }
 
 
@@ -506,6 +613,12 @@ background-color: #4804DB;
     padding: 10px;
     text-align: center;
     width: 45px;
+<<<<<<< HEAD
   }
+=======
+}
+
+
+>>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 }
 
