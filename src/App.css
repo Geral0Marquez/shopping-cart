@@ -113,17 +113,6 @@ outline:none;
   color: transparent;
 }
 
-.title-2{
-  padding-left: 25px;
-  padding-top: 4%;
-  border-top:2px solid rgb(234, 232, 232);
-  color: transparent;
-}
-
-.footer{
-  padding-top: 40px;
-}
-
 
 .title-box{
 padding-top: 50px;
@@ -457,7 +446,7 @@ background-color: #4804DB;
 }
 
 
-@media (min-width: 1000px) and (max-width:1800px){
+@media (min-width: 1000px) and (max-width:1750px){
 
   .grid{
     display: grid;
@@ -506,4 +495,17 @@ background-color: #4804DB;
     text-align: center;
     width: 45px;
   }
+}
+
+@media(min-width: 1750px) and (max-width: 2000px){
+  .list-group{
+    width: 15%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 30px;
+    padding-bottom: 12px;
+    
+  }
+
+
 }

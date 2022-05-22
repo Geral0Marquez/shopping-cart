@@ -42,9 +42,8 @@ function App() {
       userSelected={userSelected}
       deselectUser={deselectUser}/>
 
-      <div className="title-box"><h1 className="title"><i className="fa-solid fa-id-card-clip"></i>     User Registration </h1></div>
+      <div className="title-box"><h1 className="title"><i className="fa-solid fa-id-card-clip"></i>  User Registration </h1></div>
       <UsersList users={users} selectUser={selectUser} removeUser={removeUser} />
-      <div className="footer"><h1 className="title-2"><b>.</b></h1></div>
       <UsersList users={users} selectUser={selectUser} removeUser={removeUser} />
       
     </div>
