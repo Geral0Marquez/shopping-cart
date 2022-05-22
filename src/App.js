@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import Modal from "./components/Modal";
 import UsersForm from "./components/UsersForm";
 import UsersList from "./components/UsersList";
 import './App.css';
+
+
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
     axios
       .get("https://users-crud1.herokuapp.com/users/")
       .then((res) => setUsers(res.data));
-      
+
   };
 
 
@@ -36,22 +37,19 @@ function App() {
 
   const deselectUser = () => setUserSelected(null);
 
-  const [showForm, setShowform] = useState(false);
-  
-  const closeModal = () => setShowform(false)
+
 
   return (
     <div>
-      <h1><b>Usuarios</b></h1>
-      {showForm && <Modal closeModal={closeModal} />}
-      <button className="btn-modal" onClick={() => setShowform(true)}>+ Crear nuevo usuario</button>
-      
+      <div><h1 className="title-1"><b>.</b></h1></div>
       <UsersForm
         getUsers={getUsers}
         userSelected={userSelected}
         deselectUser={deselectUser}
       />
+        <div className="title-box"><h1 className="title"><i className="fa-solid fa-id-card-clip"></i>   User Registration </h1></div>
       <UsersList users={users} selectUser={selectUser} removeUser={removeUser} />
+      <div className="footer"><h1 className="title-2"><b>.</b></h1></div>
      
     </div>
   );
