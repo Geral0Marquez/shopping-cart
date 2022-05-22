@@ -501,7 +501,7 @@ background-color: #4804DB;
   .list-group{
     width: 100vh;
     display: grid;
-    grid-template-columns: repeat(8, minmax(min-content,30%));
+    grid-template-columns: minmax(150px, 300px) minmax(150px, 300px);
     grid-gap: 30px;
     padding-bottom: 12px;
     
