@@ -1,11 +1,5 @@
 import axios from "axios";
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
-
-=======
-
-import React, { useEffect, useState } from "react";
->>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
 
 const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
   const [name, setName] = useState("");
@@ -50,13 +44,9 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
           getUsers();
           deselectUser();
         });
-<<<<<<< HEAD
     } 
     
     else {
-=======
-    } else {
->>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
       axios
         .post("https://users-crud1.herokuapp.com/users/",user)
         .then(() => getUsers())
@@ -64,109 +54,80 @@ const UsersForm = ({ getUsers, userSelected, deselectUser }) => {
     }
   };
 
-<<<<<<< HEAD
-  return (<div className="container-box" > 
-    <div className="container-form">
-      <h2>New user</h2>
-      <form onSubmit={submit}>
-                   
-                    <div className="wraper">
-                    <div className="box">  <label htmlFor="name" className="form-label">
-                    <i className="fa-solid fa-user"></i>
-                    </label>
-                    <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                    placeholder="First name"
-                    /></div>
-                  
-                    <div className="box">
-                      
-                    <label htmlFor="surnames" className="form-label">
-                    <i className="fa-solid fa-user-gear"></i>
-                    </label>
-                    <input
-                    type="text"
-                    className="form-control"
-                    id="surnames"
-                    onChange={(e) => setSurnames(e.target.value)}
-                    value={surnames}
-                    placeholder="Last name"
-                    />
-                    </div>
-                    </div>
-                      
-                    <div className="wraper">
-                    <div className="box">  <label htmlFor="email" className="form-label">
-                    <i className="fa-solid fa-envelope"></i>
-                    </label>
-                    <input
-                    type="text"
-                    className="form-control"
-                    id="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    value={email}
-                    placeholder="Email"
-                    /></div>
-                  
-                    <div className="box">
-                    <label htmlFor="password" className="form-label">
-                    <i className="fa-solid fa-lock"></i>
-                    </label>
-                    <input
-                    type="password"
-                    className="form-control"
-                    id="password"
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
-                    placeholder="Password"
-                    />
-                    </div>
-                    
-                    </div>
-
-                    <div className="wraper">
-                    <div className="box">
-                    <label htmlFor="birthday" className="form-label">
-                    <i className="fa-solid fa-cake-candles"></i>
-                    </label>
-                    <input
-                    type="date"
-                    className="form-control"
-                    id="birthday"
-                    onChange={(e) => setBirthday(e.target.value)}
-                    value={birthday}
-                    />
-                    </div>
-                    
-                    </div>
-                    <div className="wraper-1">
-                    <button type="submit" className="btn-form">
-                    upload
-                    </button>
-                    </div>
-                    
-                    </form>
-                    
-                
-                    </div></div>
-   
-  );
-
-=======
   return (
-    <div>
-       <UsersForm submit={submit} name={name} surnames={surnames} email={email}  
-       password={password} birthday={birthday} setName={setName} setSurnames={setSurnames}
-       setEmail={setEmail} setPassword={setPassword} setBirthday={setBirthday}
-       />
+    <div className="container-box" > 
+      <div className="container-form">
+        
+        <h2>New user</h2>
+        <form onSubmit={submit}>
+          <div className="wraper">
+            
+            <div className="box">  
+              <label htmlFor="name" className="form-label"> <i className="fa-solid fa-user"> </i> </label>
+              <input type="text" className="form-control" 
+              id="name" onChange={(e) => setName(e.target.value)} 
+              value={name} placeholder="First name" />
+            </div>
+              
+              
+            <div className="box">
+              <label htmlFor="surnames" className="form-label">
+                <i className="fa-solid fa-user-gear"></i>
+              </label> 
+              
+              <input type="text" className="form-control"
+              id="surnames" onChange={(e) => setSurnames(e.target.value)} 
+              value={surnames} placeholder="Last name" /> 
+            </div>
+
+          </div>
+
+                        
+          <div className="wraper">
+            <div className="box">
+              <label htmlFor="email" className="form-label">
+                <i className="fa-solid fa-envelope"></i>
+              </label>
+
+              <input type="text" className="form-control"
+              id="email" onChange={(e) => setEmail(e.target.value)}
+              value={email} placeholder="Email"/>
+            </div>
+            
+            <div className="box">
+              <label htmlFor="password" className="form-label">
+                <i className="fa-solid fa-lock"></i>
+              </label>
+              
+              <input type="password" className="form-control"
+              id="password" onChange={(e) => setPassword(e.target.value)}
+              value={password} placeholder="Password"/>
+            </div>
+          </div>
+          
+          <div className="wraper">
+            <div className="box">
+              <label htmlFor="birthday" className="form-label">
+                <i className="fa-solid fa-cake-candles"></i>
+              </label>
+              <input type="date" className="form-control"
+              id="birthday" onChange={(e) => setBirthday(e.target.value)}
+              value={birthday}/>
+            </div>
+          </div>
+          
+          <div className="wraper-1">
+            <button type="submit" className="btn-form">
+              upload
+            </button>
+          </div>
+                      
+        </form>
+      </div>
+    
     </div>
-   
   );
->>>>>>> 3ccc310d24b3575239bd0b1a8d30f6772562d538
+
 };
 
 export default UsersForm;
