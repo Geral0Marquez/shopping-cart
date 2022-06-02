@@ -1,52 +1,24 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import UsersForm from "./components/UsersForm";
-import UsersList from "./components/UsersList";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import PokedexDetail from "./components/PokedexDetail";
+import Pokedex from "./components/Pokedex";
+import ProtectedRoutes from "./components/ProtectedRoutes";
+import PokeInput from "./components/PokeInput";
 import './App.css';
 
 
 function App() {
-
- const [users, setUsers] = useState([]);
- const [userSelected, setUserSelected] = useState(null);
-
-
-  useEffect(() => {
-    axios
-      .get("https://users-crud1.herokuapp.com/users/")
-      .then((res) => setUsers(res.data));
-  }, []);
-
-
-  const getUsers = () => {
-    axios
-      .get("https://users-crud1.herokuapp.com/users/")
-      .then((res) => setUsers(res.data));
-  };
-
-
-  const removeUser = (id) => {
-    axios
-      .delete(`https://users-crud1.herokuapp.com/users/${id}/`)
-      .then(() => getUsers());
-  };
-  const selectUser = (user) => setUserSelected(user);
-
-  const deselectUser = () => setUserSelected(null);
-
   return (
-    <div> 
-
-      <UsersForm
-      getUsers={getUsers}
-      userSelected={userSelected}
-      deselectUser={deselectUser}/>
-
-      <div className="title-box"><h1 className="title"><i className="fa-solid fa-id-card-clip"></i>  User Registration </h1></div>
-      <UsersList users={users} selectUser={selectUser} removeUser={removeUser} />
-      <UsersList users={users} selectUser={selectUser} removeUser={removeUser} />
-      
-    </div>
+    <HashRouter>
+      <div>
+        <Routes>
+          <Route path="/" element={<PokeInput />} />
+          <Route element={<ProtectedRoutes />}>
+            <Route path="/pokedex" element={<Pokedex/>} />
+            <Route path="/pokedex/:id" element={<PokedexDetail />} />
+          </Route>
+        </Routes>
+      </div>
+    </HashRouter>
   );
 }
 
