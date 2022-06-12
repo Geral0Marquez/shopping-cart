@@ -39,7 +39,7 @@ const ProductsDetail = () => {
         transform: `translateX(-${(currentImage - 1) * percent}%)`
     }
 
-
+    
 
     useEffect(() => {
 
@@ -149,7 +149,7 @@ const ProductsDetail = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <button className="add-cart-button"  onClick={() => addCart(product.id)}>
+                                <button className="add-cart-button"  onClick={addCart} >
                                     Add to cart <i className='icon-shopping-cart'></i>
                                 </button>
                             </div>
@@ -166,6 +166,7 @@ const ProductsDetail = () => {
                     Discover similar items
                 </strong>
                 <ul>
+
 
                     {productList.map((productItem) => (
                         <li  key={productItem.id} onClick={() => navigate(`/products/${productItem.id}`)}>

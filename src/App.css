@@ -19,6 +19,10 @@ html {
 
 
 
+
+
+
+
 /*button*/
 
 h2{
@@ -136,6 +140,11 @@ color: #334fef;
     position: relative;
     height: 100%;
     
+}
+
+.product-card:hover{
+    transform: scale(0.9);
+    transition: .3s;
 }
 
 .product-card a{
@@ -352,6 +361,10 @@ footer i{
 
 
 /*--------------------------------*/
+
+.title{
+cursor: pointer;
+}
 
 .navbar{
     height: 60px;
@@ -1167,7 +1180,7 @@ img {
     .purchases{
         padding: 40px 20px 80px;
     }
-    .purchases .history{
+    .purchases .leaded{
         margin-bottom: 30px;
     }
 }
@@ -1306,6 +1319,16 @@ img {
     color: #fff;
     padding: 10px;
     width: 100%;
+}
+
+
+@media (min-width: 200px)  and (max-width:475px){
+
+    img {
+        width: 100%;
+        background-color:transparent;
+    }
+
 }
 
 

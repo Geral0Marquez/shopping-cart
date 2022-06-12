@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate} from 'react-router-dom';
 import { filterProducts, getProducts, filterCategory } from '../store/slices/products.slice';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
-import { addToCart } from "../store/slices/cart.slice";
+import ProductCart from '../components/ProductCart';
+
 
 const Home = () => {
     
     const products = useSelector(state => state.products)
     const dispatch = useDispatch();
-    const navigate = useNavigate();
     const [search, setSearch] = useState("");
     const [categories, setCategories] = useState([]);
     const [isOpen, setIsOpen] = useState(true);
-    const addCart = (id)=>{
-        const productToAdd={
-            id:id
-        }
-        if(localStorage.getItem("token")){
-            dispatch(addToCart(productToAdd));
-        } else {
-            navigate("/login");
-        }
-       
-    }
+   
 
 
     const filterItem = () => {
@@ -76,7 +65,6 @@ const Home = () => {
 
                                 }
 
-
                             </div>
 
                         </div>
@@ -88,23 +76,8 @@ const Home = () => {
                     {
                         products?.map(productItem => (
 
-                            <li key={productItem.id} onClick={() => navigate(`/products/${productItem.id}/`)}>
-                                <div className='product-card'> <div className='image'>
-                                    <img src={productItem.productImgs[1]} alt="" className="over" />
-                                    <img src={productItem.productImgs?.[0]} alt="" />
-                                </div>
-                                    <div className='info'>
-                                        <strong>{productItem.title}</strong>
-                                        <span className='price'>Price</span>
-                                        <span className="amount">$ {productItem.price}</span>
-                                    </div>
-                                    <button className='cart-button' onClick={() => addCart(productItem.id)} >
-                                        <i className="fa-solid fa-cart-shopping"></i>
-                                        
-                                    </button>
-                                </div>
-
-
+                            <li key={productItem.id}>
+                              <ProductCart product={productItem} />
 
                             </li>
 
